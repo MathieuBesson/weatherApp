@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.10/css/weather-icons.min.css" />
+    <link rel="stylesheet" href="https://cdn.materialdesignicons.com/5.3.45/css/materialdesignicons.min.css">
+
+    <!-- SASS -->
+    <link rel="stylesheet" href="./css/main.min.css">
+
+
+</head>
+
+<body>
+
+    <section class="container">
+
+        <div class="row justify-content-center">
+            <div class="col-6">
+                <div id="app">
+                    <div id="sidenav">
+                    <!-- <a href="#">About</a>
+                    <a href="#">Services</a>
+                    <a href="#">Clients</a>
+                    <a href="#">Contact</a> -->
+                    </div>
+                    <div id="menu">
+                        <div class="row justify-content-between">
+                            <div class="col-3">
+                                <button class="navbar-toggler" aria-expanded="false">
+                                    <span class="navicon"></span>
+                                </button>
+                            </div>
+                            <div class="col-6">
+                                <h1 id="date"></h1>
+                            </div>
+                            <p class="col-2">°C</p>
+                        </div>
+                    </div>
+                    <div id="current-forecast">
+                        <div class="row justify-content-between">
+                            <div class="col-8">
+                                <div class="location">
+                                    <h2 id="city">
+                                    </h2>
+                                    <span class="tooltip">Entrer la ville souhaité</span>
+                                    <span class="tooltip-error"></span>
+                                </div>
+                                </h1>
+                                <h2 id="temp-average"></h2>
+                                <div class="temp-difference">
+                                    <span class="mdi mdi-chevron-up"></span><span id="temp-max"></span>
+                                    <span class="mdi mdi-chevron-down"></span><span id="temp-min"></span><br />
+                                </div>
+
+                                <span id="condition"></span>
+                            </div>
+                            <div class="col-4">
+                                <div class="main-icon"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <aside id="more-infos" class="col-12">
+                        <div class="row">
+                            <div class="col-6">
+                                <p>
+                                    <em>Humidité</em><br />
+                                    <span class="mdi mdi-water-outline"></span>
+                                    <span id="rain-probability"></span>
+                                </p>
+                                <p>
+                                    <em>Cumule pluie</em><br />
+                                    <span class="mdi mdi-weather-pouring"></span>
+                                    <span id="rain-day"></span>
+                                </p>
+                                <p>
+                                    <em>Ensoleillement</em><br />
+                                    <span class="mdi mdi-white-balance-sunny"></span>
+                                    <span id="sun-hours"></span>
+                                </p>
+                            </div>
+                            <div class="col-6">
+                                <p>
+                                    <em>Vitesse vent</em><br />
+                                    <span class="mdi mdi-weather-windy"></span>
+                                    <span id="wind-speed"></span>
+                                </p>
+                                <p>
+                                    <em>Direction vent</em><br />
+                                    <span class="mdi mdi-compass-outline"></span>
+                                    <span id="wind-direction"></span>
+                                </p>
+                            </div>
+                        </div>
+                    </aside>
+                    <div id="forecasts">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src='./app.js'></script>
+</body>
+
+</html>

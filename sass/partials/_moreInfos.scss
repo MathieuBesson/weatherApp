@@ -1,0 +1,29 @@
+#more-infos{
+    padding-right:60px;
+    padding-left:60px;
+    border-top: 2px solid rgba(355, 355, 355, 0.3);
+    border-bottom: 2px solid rgba(355, 355, 355, 0.3);
+    position : relative;
+    padding-top: 30px;
+    p {
+        margin-bottom: 30px;
+        font-size: 1em;
+        em{
+            opacity: 0.75;
+            font-style: normal;
+            font-weight: 500;
+        }
+    }
+    span{
+        font-size: 1.4em;
+        display: inline-block;
+        margin-top: 10px;
+        font-weight: 600;
+        &[class^="mdi"], &[class^="wi"]{
+            font-size: 1.5em;
+            font-weight: 400;
+            margin-right:5px;
+        }
+    }
+}
+

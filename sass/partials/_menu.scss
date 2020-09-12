@@ -1,0 +1,57 @@
+#menu{
+    padding: 50px;
+    padding-bottom: 0px;
+    h1{
+        text-align: center;
+        margin-top: 8px;
+        font-size: 1em;
+    }
+    p{
+        text-align: right;
+        margin-top: 8px;
+    }
+    button {    
+        cursor: pointer;
+        display: inline-block;
+        user-select: none;
+        margin-bottom: 0px;
+        z-index: 3;
+        position: relative;
+        span{
+            background: white;
+            cursor: pointer;
+            display: block;
+            height: 3px;
+            position: relative;
+            transition: background .2s ease-out;
+            width: 30px;
+            border-radius: 5px;
+            z-index: 3;
+            &:before, &:after{
+                background: white;
+                content: '';
+                display: block;
+                height: 3px;
+                position: absolute;
+                transition: all .2s ease-out;
+                width: 100%;
+                border-radius: 5px;
+            }
+            &:before{
+                top: 8px;
+            }
+            &:after{
+                top: -8px;
+            }
+        }
+        &:focus{
+            outline: transparent;
+        }
+    }
+}
+
+
+
+
+
+    

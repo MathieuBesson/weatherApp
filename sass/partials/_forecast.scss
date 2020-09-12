@@ -1,0 +1,41 @@
+
+#forecasts{
+    padding: 35px 45px;
+    div{
+        font-weight: 500;
+    }
+    .card{
+        background-color: transparent;
+        flex-direction: row;
+        padding:10px;
+        padding-top: 13px;
+        border: none;
+        cursor: pointer;
+        border: transparent solid 2px;
+        border-radius: 25px;
+        .temp{
+            text-align: right;
+            span {
+                width: 20px;
+                display: inline-block;
+                margin-right: 20px;
+                font-weight: 500;
+                &.temp-min{
+                    opacity: 0.6;
+                }
+            }
+            #temp-min, #temp-max{
+                margin-left:5px;
+                margin-right:10px;
+                font-weight: 500;
+            }
+        }
+        .wi{
+            font-weight: 400;
+            font-size: 1.3em
+        }
+        &.current-weather{
+            border: rgba(355, 355, 355, 0.4) solid 2px;
+        }
+    }
+}
