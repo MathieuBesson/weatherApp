@@ -91,13 +91,6 @@ body {
   padding-bottom: 0px;
 }
 
-@media screen and (max-width: 450px) {
-  #menu {
-    padding: 20px;
-    padding-bottom: 0px;
-  }
-}
-
 #menu h1 {
   text-align: center;
   margin-top: 8px;
@@ -121,43 +114,78 @@ body {
   position: relative;
 }
 
-#menu button span {
-  background: white;
-  cursor: pointer;
-  display: block;
-  height: 3px;
-  position: relative;
-  -webkit-transition: background .2s ease-out;
-  transition: background .2s ease-out;
+#menu button #nav-icon3 {
   width: 30px;
-  border-radius: 5px;
-  z-index: 3;
+  height: 45px;
+  position: relative;
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  cursor: pointer;
 }
 
-#menu button span:before, #menu button span:after {
-  background: white;
-  content: '';
+#menu button #nav-icon3 span {
   display: block;
-  height: 3px;
   position: absolute;
-  -webkit-transition: all .2s ease-out;
-  transition: all .2s ease-out;
+  height: 0.175em;
   width: 100%;
-  border-radius: 5px;
+  background: #fff;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .25s ease-in-out;
+  transition: .25s ease-in-out;
 }
 
-#menu button span:before {
-  top: 8px;
+#menu button #nav-icon3 span:nth-child(1) {
+  top: 4px;
 }
 
-#menu button span:after {
-  top: -8px;
+#menu button #nav-icon3 span:nth-child(2), #menu button #nav-icon3 span:nth-child(3) {
+  top: 14px;
+}
+
+#menu button #nav-icon3 span:nth-child(4) {
+  top: 24px;
+}
+
+#menu button #nav-icon3.open-burger span:nth-child(1) {
+  top: 18px;
+  width: 0%;
+  left: 50%;
+}
+
+#menu button #nav-icon3.open-burger span:nth-child(2) {
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+#menu button #nav-icon3.open-burger span:nth-child(3) {
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+#menu button #nav-icon3.open-burger span:nth-child(4) {
+  top: 18px;
+  width: 0%;
+  left: 50%;
 }
 
 #menu button:focus {
   outline: transparent;
 }
 
+@media screen and (max-width: 450px) {
+  #menu {
+    padding: 20px;
+    padding-bottom: 0px;
+  }
+}
+
+/* Icon 1 */
 #current-forecast {
   padding: 30px 60px;
 }
@@ -241,6 +269,23 @@ body {
     width: 230px;
     height: 230px;
     right: 3%;
+  }
+  #current-forecast .location .tooltip {
+    top: -40px;
+    opacity: 1;
+    font-size: 9px;
+  }
+  #current-forecast .location .tooltip:after {
+    content: '';
+    position: absolute;
+    top: 30px;
+    left: 40px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 10px 16.5px 0 16.5px;
+    border-color: #222 transparent transparent transparent;
+    border-radius: 5px;
   }
 }
 
@@ -332,19 +377,8 @@ body {
 }
 
 #forecasts {
+  padding: 35px 45px;
   font-size: 0.95em;
-}
-
-@media screen and (max-width: 450px) {
-  #forecasts {
-    padding: 15px 25px;
-  }
-}
-
-@media screen and (min-width: 450px) {
-  #forecasts {
-    padding: 35px 45px;
-  }
 }
 
 #forecasts div {
@@ -363,6 +397,8 @@ body {
   cursor: pointer;
   border: transparent solid 2px;
   border-radius: 25px;
+  -webkit-transition: .25s;
+  transition: .25s;
 }
 
 #forecasts .card .rain-probability {
@@ -405,5 +441,11 @@ body {
 
 #forecasts .card.current-weather {
   border: rgba(255, 255, 255, 0.4) solid 2px;
+}
+
+@media screen and (max-width: 450px) {
+  #forecasts {
+    padding: 15px 25px;
+  }
 }
 /*# sourceMappingURL=main.css.map */

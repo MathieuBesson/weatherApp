@@ -45,7 +45,6 @@ async function main(withIP = true) {
     } else {
         ErrorMessage('Ville introuvable!', 1);
     }
-    slideNav();
 }
 
 function ErrorMessage(content, opacity) {
@@ -123,8 +122,10 @@ function updateCurrentWeather(weather, daySelect) {
 }
 
 function slideNav() {
+    let x =0;
     document.querySelector('button.navbar-toggler').addEventListener('click', () => {
         document.querySelector('#sidenav').classList.toggle('open');
+        document.querySelector('.navicon').classList.toggle('open-burger');
     })
 }
 
@@ -194,7 +195,6 @@ const city = document.querySelector('#city');
 
 city.addEventListener('click', () => {
     city.contentEditable = true;
-    console.log(city);
 })
 
 city.addEventListener('keydown', (e) => {
@@ -206,6 +206,8 @@ city.addEventListener('keydown', (e) => {
 })
 
 main();
+slideNav();
+
 
 const weatherTypes = {
     "sunny": [0],

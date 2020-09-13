@@ -1,10 +1,6 @@
 #menu{
     padding: 50px;
     padding-bottom: 0px;
-    @media screen and (max-width: 450px) {
-        padding: 20px;
-        padding-bottom: 0px;
-    }
     h1{
         text-align: center;
         margin-top: 8px;
@@ -21,36 +17,79 @@
         margin-bottom: 0px;
         z-index: 3;
         position: relative;
-        span{
-            background: white;
-            cursor: pointer;
-            display: block;
-            height: 3px;
-            position: relative;
-            transition: background .2s ease-out;
+        #nav-icon3{
             width: 30px;
-            border-radius: 5px;
-            z-index: 3;
-            &:before, &:after{
-                background: white;
-                content: '';
+            height: 45px;
+            position: relative;
+            // margin: 50px auto;
+            -webkit-transform: rotate(0deg);
+            -moz-transform: rotate(0deg);
+            -o-transform: rotate(0deg);
+            transform: rotate(0deg);
+            -webkit-transition: .5s ease-in-out;
+            -moz-transition: .5s ease-in-out;
+            -o-transition: .5s ease-in-out;
+            transition: .5s ease-in-out;
+            cursor: pointer;
+            span{
                 display: block;
-                height: 3px;
                 position: absolute;
-                transition: all .2s ease-out;
+                height: 0.175em;
                 width: 100%;
-                border-radius: 5px;
+                background: #fff;
+                border-radius: 9px;
+                opacity: 1;
+                left: 0;
+                -webkit-transform: rotate(0deg);
+                -moz-transform: rotate(0deg);
+                -o-transform: rotate(0deg);
+                transform: rotate(0deg);
+                -webkit-transition: .25s ease-in-out;
+                -moz-transition: .25s ease-in-out;
+                -o-transition: .25s ease-in-out;
+                transition: .25s ease-in-out;
+                &:nth-child(1) {
+                    top:4px;
+                }
+                &:nth-child(2), &:nth-child(3) {
+                    top: 14px;
+                }
+                &:nth-child(4) {
+                    top: 24px;
+                  }
             }
-            &:before{
-                top: 8px;
-            }
-            &:after{
-                top: -8px;
+            &.open-burger span{
+                &:nth-child(1) {
+                    top: 18px;
+                    width: 0%;
+                    left: 50%;
+                }
+                &:nth-child(2) {
+                    -webkit-transform: rotate(45deg);
+                    -moz-transform: rotate(45deg);
+                    -o-transform: rotate(45deg);
+                    transform: rotate(45deg);
+                }
+                &:nth-child(3) {
+                    -webkit-transform: rotate(-45deg);
+                    -moz-transform: rotate(-45deg);
+                    -o-transform: rotate(-45deg);
+                    transform: rotate(-45deg);
+                }
+                &:nth-child(4) {
+                    top: 18px;
+                    width: 0%;
+                    left: 50%;
+                }
             }
         }
         &:focus{
             outline: transparent;
         }
+    }
+    @media screen and (max-width: 450px) {
+        padding: 20px;
+        padding-bottom: 0px;
     }
 }
 
@@ -59,3 +98,7 @@
 
 
     
+  /* Icon 1 */
+  
+
+  
