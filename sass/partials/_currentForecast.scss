@@ -56,4 +56,21 @@
         }
     }
 
+    @media screen and (max-width: 450px) {
+        padding: 40px 30px;
+        #city {
+            font-size: 1.5em;
+        }
+        #temp-average {
+            font-size: 4em;
+        }
+        div.main-icon{
+            font-size: 8em;
+            padding: 55px 0px 0px 46px;
+            width: 230px;
+            height: 230px;
+            right: 3%;
+        }
+    }
+
 }

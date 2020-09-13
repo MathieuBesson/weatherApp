@@ -1,9 +1,15 @@
 
 #forecasts{
-    padding: 35px 45px;
+    @media screen and (max-width: 450px) {
+        padding: 15px 25px;
+    }
+    @media screen and (min-width: 450px) {
+        padding: 35px 45px;
+    }
     div{
         font-weight: 500;
     }
+    font-size: 0.95em;
     .card{
         background-color: transparent;
         flex-direction: row;
@@ -13,15 +19,23 @@
         cursor: pointer;
         border: transparent solid 2px;
         border-radius: 25px;
+        .rain-probability{
+            text-align: right;
+        }
+        .date{
+            font-size: 0.9em;
+        }
         .temp{
             text-align: right;
             span {
                 width: 20px;
                 display: inline-block;
-                margin-right: 20px;
                 font-weight: 500;
                 &.temp-min{
                     opacity: 0.6;
+                }
+                &:not(:last-child){
+                    margin-right: 15px;
                 }
             }
             #temp-min, #temp-max{
@@ -32,7 +46,8 @@
         }
         .wi{
             font-weight: 400;
-            font-size: 1.3em
+            font-size: 1.3em;
+            margin-right: 10px;
         }
         &.current-weather{
             border: rgba(355, 355, 355, 0.4) solid 2px;

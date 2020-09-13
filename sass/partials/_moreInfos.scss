@@ -1,13 +1,14 @@
 #more-infos{
-    padding-right:60px;
-    padding-left:60px;
+    padding: 30px 60px;
     border-top: 2px solid rgba(355, 355, 355, 0.3);
     border-bottom: 2px solid rgba(355, 355, 355, 0.3);
     position : relative;
-    padding-top: 30px;
     p {
-        margin-bottom: 30px;
-        font-size: 1em;
+        margin-bottom: 0px;
+        font-size: 0.958em;
+        &:not(:last-child){
+            margin-bottom: 30px;
+        }
         em{
             opacity: 0.75;
             font-style: normal;
@@ -24,6 +25,9 @@
             font-weight: 400;
             margin-right:5px;
         }
+    }
+    @media screen and (max-width: 450px) {
+        padding: 40px 30px;
     }
 }
 

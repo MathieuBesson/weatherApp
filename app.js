@@ -151,34 +151,39 @@ function createCarrousselElement(content, weather, index) {
     let forecasts = document.querySelector('#forecasts');
 
     let card = document.createElement('div');
-    let h1 = document.createElement('div');
+    let date = document.createElement('div');
     let tempMed = document.createElement('p');
     let icon = document.createElement('div');
     let tempMin = document.createElement('span');
     let tempMax = document.createElement('span');
     let rainProbability = document.createElement('div');
     let temp = document.createElement('div');
+    let weatherForecasts = document.createElement('div');
+
 
     card.classList.add('card', 'row', 'justify-content-between', 'd-flex');
-    h1.classList.add('date', 'col-4');
-    icon.classList.add('wi', getWeatherClass(weather[0].forecasts[index].weather), 'col-2');
+    date.classList.add('date', 'col-4');
+    icon.classList.add('wi', getWeatherClass(weather[0].forecasts[index].weather));
     tempMin.classList.add('temp-min');
     tempMax.classList.add('temp-max');
-    temp.classList.add('col-4', 'temp');
+    temp.classList.add('temp', 'col-4');
+    weatherForecasts.classList.add('weather', 'd-flex');
+    
 
-    rainProbability.classList.add('rain-probability', 'col-2');
+    rainProbability.classList.add('rain-probability');
 
     if (index === 0) { card.classList.add('current-weather'); }
 
     temp.appendChild(tempMax);
     temp.appendChild(tempMin);
-    card.appendChild(h1);
-    card.appendChild(icon);
-    card.appendChild(rainProbability);
+    weatherForecasts.appendChild(icon);
+    weatherForecasts.appendChild(rainProbability);
+    card.appendChild(date);
+    card.appendChild(weatherForecasts);
     card.appendChild(temp);
     forecasts.appendChild(card);
 
-    h1.textContent = datestring;
+    date.textContent = datestring;
     tempMin.textContent = content.tmin;
     tempMax.textContent = content.tmax;
     rainProbability.textContent = (content.rainProbability !== 0) ? content.rainProbability + ' %' : '';
