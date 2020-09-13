@@ -1,8 +1,5 @@
 # Weather App
 
-https://mathieu-be-weatherapp.netlify.app/
-
-
 <p align="center">
     <img src="https://mathieu-be-weatherapp.netlify.app/img/logo.svg" alt="logo" width="200" height="200">
 </p>
@@ -11,13 +8,15 @@ https://mathieu-be-weatherapp.netlify.app/
 
 WeatherApp est une plateforme web donnant l'accès à la météo pour une ville donnée et pour une durée d'une semaine, en plus de la météo l'application donne accès à différentes indications telles que le pourcentage d'humidité ou encore l'ensoleillement. L'utilisateur a donc accède rapidement à des informations synthétiques sur l'état de la météo actuel.
 
+Lien vers la version en ligne : https://mathieu-be-weatherapp.netlify.app/
+
 ---
 
-## Features
+## Fonctionnalités
 
 * Recherche de la météo par ville.
 * Visualisation par jour.
-* Possibilité d'ajout de ville en favoris
+* Possibilité d'ajout de villes en favoris.
 
 ---
 
@@ -41,7 +40,7 @@ WeatherApp est une plateforme web donnant l'accès à la météo pour une ville 
 
 ---
 
-### Thanks
+### Remerciements
 
 * Merci à Kostya Sobol pour son template d'application météo
 * Merci de votre visite !
