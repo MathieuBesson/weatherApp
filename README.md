@@ -4,7 +4,7 @@ https://mathieu-be-weatherapp.netlify.app/
 
 
 <p align="center">
-    <img src="file:///D:/Logiciels/wamp64/www/projects/weatherApp/img/logo.svg" alt="logo" width="200" height="200">
+    <img src="https://mathieu-be-weatherapp.netlify.app/img/logo.svg" alt="logo" width="200" height="200">
 </p>
 
 
@@ -21,7 +21,7 @@ WeatherApp est une plateforme web donnant l'accès à la météo pour une ville 
 
 ---
 
-## Use of 
+## Utilisation de 
 
 * Bootsrap, Sass, Javascript
 * Web Apis :
@@ -35,7 +35,7 @@ WeatherApp est une plateforme web donnant l'accès à la météo pour une ville 
 
 ## Installation
 
-1. Télécharger/Cloner le projet projet.
+1. Télécharger/Cloner le projet.
 2. Lancer index.html sur votre navigateur
 3. N'hésitez pas à me donner votre avis sur twitter https://twitter.com/BessonMathieu3 en MP !
 
@@ -43,5 +43,5 @@ WeatherApp est une plateforme web donnant l'accès à la météo pour une ville 
 
 ### Thanks
 
-* Thank to Kostya Sobol for his Weather app template
-* Thank for watching
+* Merci à Kostya Sobol pour son template d'application météo
+* Merci de votre visite !
