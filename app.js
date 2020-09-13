@@ -119,6 +119,10 @@ function updateCurrentWeather(weather, daySelect) {
 
     document.querySelector('.main-icon').className = 'main-icon wi ' + getWeatherClass(weather[0].forecasts[daySelect].weather);
     document.querySelector('#app').className = getWeatherClass(weather[0].forecasts[daySelect].weather, true);
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth',
+    });
 }
 
 function slideNav() {
