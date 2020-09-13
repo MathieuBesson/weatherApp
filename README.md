@@ -17,18 +17,20 @@ Lien vers la version en ligne : https://mathieu-be-weatherapp.netlify.app/
 * Recherche de la météo par ville.
 * Visualisation par jour.
 * Possibilité d'ajout de villes en favoris.
+* Site responsive. 
 
 ---
 
 ## Utilisation de 
 
-* Bootsrap, Sass, Javascript
+* Bootsrap , Sass, Javascript
 * Web Apis :
     - https://api.ipify.org
     - https://freegeoip.app
     - https://geo.api.gouv.fr
     - https://api.meteo-concept.com
 * Template : https://dribbble.com/shots/13372672-Weather-app
+* Police d'icons météo https://erikflowers.github.io/weather-icons/, et d'icons simple https://materialdesignicons.com/ 
 
 ---
 
@@ -43,4 +45,5 @@ Lien vers la version en ligne : https://mathieu-be-weatherapp.netlify.app/
 ### Remerciements
 
 * Merci à Kostya Sobol pour son template d'application météo
-* Merci de votre visite !
+* Merci à Erik Flowers pour sa police d'icons météo opensource https://github.com/erikflowers/weather-icons
+* Et ... Merci de votre visite !
