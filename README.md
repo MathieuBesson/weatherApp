@@ -25,7 +25,7 @@ Lien vers la version en ligne : https://mathieu-be-weatherapp.netlify.app/
 
 * Bootsrap , Sass, Javascript
 * Web Apis :
-    - https://api.ipify.org
+    - https://ipify.org
     - https://freegeoip.app
     - https://geo.api.gouv.fr
     - https://api.meteo-concept.com
