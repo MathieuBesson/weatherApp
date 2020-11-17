@@ -27,9 +27,8 @@ Lien vers la version en ligne : https://mathieubesson-weatherapp.netlify.app/
 
 * Bootsrap , Sass, Javascript
 * Web Apis :
-    - https://ipify.org
     - https://freegeoip.app
-    - https://geo.api.gouv.fr
+    - https://api-adresse.data.gouv.fr
     - https://api.meteo-concept.com
 * Template : https://dribbble.com/shots/13372672-Weather-app
 * Police d'icons météo https://erikflowers.github.io/weather-icons/, et d'icons simple https://materialdesignicons.com/ 

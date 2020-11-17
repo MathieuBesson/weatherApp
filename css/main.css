@@ -33,55 +33,46 @@ body {
 }
 
 .sunny {
-  background: -webkit-gradient(linear, left top, left bottom, from(#ebb123), to(#ed7301));
   background: linear-gradient(to bottom, #ebb123, #ed7301);
   opacity: 0.9;
 }
 
 .cloud {
-  background: -webkit-gradient(linear, left top, left bottom, from(#b7bec5), to(#3f4852));
   background: linear-gradient(to bottom, #b7bec5, #3f4852);
   opacity: 0.9;
 }
 
 .cloudy {
-  background: -webkit-gradient(linear, left top, left bottom, from(#b1c0d0), to(#33374d));
   background: linear-gradient(to bottom, #b1c0d0, #33374d);
   opacity: 0.9;
 }
 
 .fog {
-  background: -webkit-gradient(linear, left top, left bottom, from(#cbc5c5), to(#9e9e9e));
   background: linear-gradient(to bottom, #cbc5c5, #9e9e9e);
   opacity: 0.9;
 }
 
 .smallRain {
-  background: -webkit-gradient(linear, left top, left bottom, from(#4f8cd5), to(#2e52a6));
   background: linear-gradient(to bottom, #4f8cd5, #2e52a6);
   opacity: 0.9;
 }
 
 .heavyRain {
-  background: -webkit-gradient(linear, left top, left bottom, from(#26598c), to(#18365b));
   background: linear-gradient(to bottom, #26598c, #18365b);
   opacity: 0.9;
 }
 
 .drizzle {
-  background: -webkit-gradient(linear, left top, left bottom, from(#9eb4c9), to(#6b818d));
   background: linear-gradient(to bottom, #9eb4c9, #6b818d);
   opacity: 0.9;
 }
 
 .snow {
-  background: -webkit-gradient(linear, left top, left bottom, from(#c7ced8), to(#95a0b6));
   background: linear-gradient(to bottom, #c7ced8, #95a0b6);
   opacity: 0.9;
 }
 
 .thunderstorms {
-  background: -webkit-gradient(linear, left top, left bottom, from(#b6c9f4), to(#003d7a));
   background: linear-gradient(to bottom, #b6c9f4, #003d7a);
   opacity: 0.9;
 }
@@ -105,12 +96,9 @@ body {
 #menu button {
   cursor: pointer;
   display: inline-block;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  user-select: none;
   margin-bottom: 0px;
-  z-index: 3;
+  z-index: 1000;
   position: relative;
 }
 
@@ -118,9 +106,7 @@ body {
   width: 30px;
   height: 45px;
   position: relative;
-  -webkit-transform: rotate(0deg);
   transform: rotate(0deg);
-  -webkit-transition: .5s ease-in-out;
   transition: .5s ease-in-out;
   cursor: pointer;
 }
@@ -134,9 +120,7 @@ body {
   border-radius: 9px;
   opacity: 1;
   left: 0;
-  -webkit-transform: rotate(0deg);
   transform: rotate(0deg);
-  -webkit-transition: .25s ease-in-out;
   transition: .25s ease-in-out;
 }
 
@@ -159,12 +143,10 @@ body {
 }
 
 #menu button #nav-icon3.open-burger span:nth-child(2) {
-  -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 
 #menu button #nav-icon3.open-burger span:nth-child(3) {
-  -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg);
 }
 
@@ -185,7 +167,6 @@ body {
   }
 }
 
-/* Icon 1 */
 #current-forecast {
   padding: 30px 60px;
 }
@@ -225,8 +206,7 @@ body {
   width: 300px;
   height: 300px;
   font-weight: 200;
-  -webkit-transform: matrix(-1, 0, 0, 1, 0, 0);
-          transform: matrix(-1, 0, 0, 1, 0, 0);
+  transform: matrix(-1, 0, 0, 1, 0, 0);
   padding: 76px 0px 0px 73px;
 }
 
@@ -239,7 +219,6 @@ body {
   border-radius: 5px;
   padding: 10px;
   font-size: 12px;
-  -webkit-transition: opacity .3s, top .5s;
   transition: opacity .3s, top .5s;
 }
 
@@ -271,6 +250,7 @@ body {
     right: 3%;
   }
   #current-forecast .location .tooltip {
+    z-index: 300;
     top: -40px;
     opacity: 1;
     font-size: 9px;
@@ -290,19 +270,24 @@ body {
 }
 
 #sidenav {
+  z-index: 400;
   width: 0%;
   height: 96%;
   width: 0;
   position: absolute;
-  z-index: 1;
   top: 30px;
   left: 15px;
   background-color: #111;
   overflow-x: hidden;
-  -webkit-transition: 0.5s;
   transition: 0.5s;
   padding-top: 60px;
   border-radius: 20px;
+}
+
+#sidenav p {
+  text-align: center;
+  transition: 0.2s;
+  opacity: 0;
 }
 
 #sidenav a {
@@ -311,7 +296,6 @@ body {
   font-size: 25px;
   color: #818181;
   display: block;
-  -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 
@@ -321,6 +305,10 @@ body {
 
 #sidenav.open {
   width: 95% !important;
+}
+
+#sidenav.open p {
+  opacity: 1;
 }
 
 @media screen and (max-width: 576px) {
@@ -387,17 +375,13 @@ body {
 
 #forecasts .card {
   background-color: transparent;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  flex-direction: row;
   padding: 10px;
   padding-top: 13px;
   border: none;
   cursor: pointer;
   border: transparent solid 2px;
   border-radius: 25px;
-  -webkit-transition: .25s;
   transition: .25s;
 }
 

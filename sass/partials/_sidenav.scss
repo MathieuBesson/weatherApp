@@ -1,9 +1,9 @@
 #sidenav {
+    z-index: 400;
     width: 0%;
     height: 96%;
     width: 0;
     position: absolute;
-    z-index: 1;
     top: 30px;
     left: 15px;
     background-color: #111;
@@ -11,6 +11,11 @@
     transition: 0.5s;
     padding-top: 60px;
     border-radius: 20px;
+    p{
+        text-align: center;
+        transition: 0.2s;
+        opacity: 0;
+    }
     a {
         padding: 8px 8px 8px 32px;
         text-decoration: none;
@@ -22,7 +27,9 @@
             color: #f1f1f1;
         }
     }
+
     &.open{
+        p{opacity: 1;}
         width: 95% !important;
     }
     @media screen and (max-width: 576px) {

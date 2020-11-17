@@ -11,33 +11,29 @@ const HTMLElements = {
 
 async function main(withIP = true) {
 
-    let userCity;
+    let userCity = {};
     if (withIP) {
-        // Get IP user 
-        const ip = await fetch('https://api.ipify.org?format=json')
+        userCity = await fetch('https://freegeoip.app/json/')
             .then(result => result.json())
-            .then(json => json.ip);
+            .then(json => {return {'latitude': json.latitude, 'longitude': json.longitude}});
 
-        // Get the city user with his IP 
-        userCity = await fetch('https://freegeoip.app/json/' + ip)
-            .then(result => result.json())
-            .then(json => json.city);
     } else {
-        userCity = city.textContent;
+        userCity = await fetch(`https://api-adresse.data.gouv.fr/search/?q=${city.textContent}&limit=1`)
+        .then(result => result.json())
+        .then(json => {
+            if(json.features.length >0){
+                return {'latitude': json.features[0].geometry.coordinates[1], 'longitude': json.features[0].geometry.coordinates[0]};
+            }
+            return undefined;
+        });
     }
 
-    // Get INSEE code of user's city
-    const limitResult = 1;
-    const inseeCode = await fetch(`https://geo.api.gouv.fr/communes?nom=${userCity}&fields=nom&boost=population&limit=${limitResult}`)
-        .then(result => result.json())
-        .then(json => { return (json.length === 1) ? json[0].code : undefined });
-
-    if (inseeCode !== undefined) {
+    if (userCity !== undefined) {
         ErrorMessage('', 0);
         // Get meteo with INSEE code 
-        const weather = await fetch(`https://api.meteo-concept.com/api/forecast/daily?token=6b21fe75eed5b1a77a380770fbbd117228d053efdb7183914ef5a9601daca4c1&insee=${inseeCode}`)
-            .then(result => result.json())
-            .then(result => { return (result.hasOwnProperty('code')) ? undefined : result });
+        console.log([userCity.latitude, userCity.longitude]);
+        let weather = await fetch(`https://api.meteo-concept.com/api/forecast/daily?token=6b21fe75eed5b1a77a380770fbbd117228d053efdb7183914ef5a9601daca4c1&latlng=${userCity.latitude},${userCity.longitude}`)
+            .then(result => result.json());
 
         if (weather !== undefined) {
             displayWeaterInfos(weather);
@@ -49,7 +45,6 @@ async function main(withIP = true) {
                     item.classList.add('current-weather');
                 });
             });
-
         } else {
             ErrorMessage('Zone géographique trop large', 1);
         }
