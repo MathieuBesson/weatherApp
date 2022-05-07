@@ -39,7 +39,6 @@ Lien vers la version en ligne : https://mathieubesson-weatherapp.netlify.app/
 
 1. Télécharger/Cloner le projet.
 2. Lancer index.html sur un navigateur
-3. N'hésitez pas à me donner votre avis sur twitter https://twitter.com/BessonMathieu3 en MP !
 
 ---
 
