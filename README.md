@@ -43,8 +43,7 @@ Lien vers la version en ligne : https://mathieubesson-weatherapp.netlify.app/
 
 ---
 
-### Remerciements
+### Sources
 
-* Merci à Kostya Sobol pour son template d'application météo
-* Merci à Erik Flowers pour sa police d'icons météo opensource https://github.com/erikflowers/weather-icons
-* Et ... Merci de votre visite !
+* Template : Kostya Sobol
+* Plice d'icons météo : Erik Flowers https://github.com/erikflowers/weather-icons
