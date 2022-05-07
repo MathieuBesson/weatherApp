@@ -8,7 +8,7 @@
 
 
 
-WeatherApp est une plateforme web donnant l'accès à la météo pour une ville donnée et pour une durée d'une semaine, en plus de la météo l'application donne accès à différentes indications telles que le pourcentage d'humidité ou encore l'ensoleillement. L'utilisateur a donc accède rapidement à des informations synthétiques sur l'état de la météo actuel.
+WeatherApp est une application donnant l'accès à la météo pour une ville donnée et pour une durée d'une semaine, en plus de la météo l'application donne accès à différentes indications telles que le pourcentage d'humidité ou encore l'ensoleillement. L'utilisateur a donc accède rapidement à des informations synthétiques sur l'état de la météo actuel.
 
 Lien vers la version en ligne : https://mathieubesson-weatherapp.netlify.app/
 
